@@ -19,7 +19,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <main>
     <section id="hero" class="hero">
       <div class="hero-content reveal">
-        <p class="subtitle" style="font-weight: 700; color: var(--accent-primary);">Focus. Accountability. ROI.</p>
+        <p class="subtitle">Focus. Accountability. ROI.</p>
         <h1>Your Entire<br/><span class="accent">Digital Growth</span></h1>
         <p class="description">
           A social media and digital sales management consultancy working 
@@ -32,18 +32,27 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <div class="hero-bg-glow"></div>
     </section>
 
-    <section id="who-we-are" class="section">
-      <div class="who-we-are reveal">
-        <div class="container">
-          <div class="grid grid-2" style="align-items: center; padding: 6rem 0;">
-            <div class="who-we-are-content">
-              <span class="label">Who We Are</span>
-              <h2>Your Digital<br/>Growth Partner</h2>
-              <p class="outcome-text">We are not a volume-based marketing agency.</p>
+    <section id="who-we-are" class="section reveal">
+      <div class="container">
+        <div class="grid grid-2 who-we-are-grid">
+          <div class="who-we-are-content">
+            <span class="label">Digital Growth Partner</span>
+            <h2 class="title-main">We don't just 'consult'. <br/><span class="accent-text serif-text">We take ownership.</span></h2>
+            <p class="description-main">
+              Most agencies focus on clicks. We focus on <span class="highlight-text">business outcomes</span>. 
+              DreamNXT.ai was built for companies that want a specialized partner to manage 
+              their entire digital footprint—from high-converting performance ads to 
+              AI-automated sales systems.
+            </p>
+          </div>
+          <div class="highlight-box-container">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Accountability</span>
             </div>
-            <div class="highlight-box">
-              <p>We take ownership of your online presence, lead flow, and performance. By intentionally working with fewer clients, we stay hands-on with strategy and execution.</p>
-              <span class="outcome-text">Our success is measured by business outcomes, not likes or impressions.</span>
+            <div class="stat-item">
+              <span class="stat-number">Premium</span>
+              <span class="stat-label">Execution</span>
             </div>
           </div>
         </div>

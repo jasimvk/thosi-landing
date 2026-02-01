@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))n(i);new MutationObserver(i=>{for(const s of i)if(s.type==="childList")for(const t of s.addedNodes)t.tagName==="LINK"&&t.rel==="modulepreload"&&n(t)}).observe(document,{childList:!0,subtree:!0});function r(i){const s={};return i.integrity&&(s.integrity=i.integrity),i.referrerPolicy&&(s.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?s.credentials="include":i.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(i){if(i.ep)return;i.ep=!0;const s=r(i);fetch(i.href,s)}})();document.querySelector("#app").innerHTML=`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))n(i);new MutationObserver(i=>{for(const s of i)if(s.type==="childList")for(const t of s.addedNodes)t.tagName==="LINK"&&t.rel==="modulepreload"&&n(t)}).observe(document,{childList:!0,subtree:!0});function c(i){const s={};return i.integrity&&(s.integrity=i.integrity),i.referrerPolicy&&(s.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?s.credentials="include":i.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(i){if(i.ep)return;i.ep=!0;const s=c(i);fetch(i.href,s)}})();document.querySelector("#app").innerHTML=`
   <header class="header">
     <div class="container">
       <nav class="nav">
@@ -17,7 +17,7 @@
   <main>
     <section id="hero" class="hero">
       <div class="hero-content reveal">
-        <p class="subtitle" style="font-weight: 700; color: var(--accent-primary);">Focus. Accountability. ROI.</p>
+        <p class="subtitle">Focus. Accountability. ROI.</p>
         <h1>Your Entire<br/><span class="accent">Digital Growth</span></h1>
         <p class="description">
           A social media and digital sales management consultancy working 
@@ -30,18 +30,27 @@
       <div class="hero-bg-glow"></div>
     </section>
 
-    <section id="who-we-are" class="section">
-      <div class="who-we-are reveal">
-        <div class="container">
-          <div class="grid grid-2" style="align-items: center; padding: 6rem 0;">
-            <div class="who-we-are-content">
-              <span class="label">Who We Are</span>
-              <h2>Your Digital<br/>Growth Partner</h2>
-              <p class="outcome-text">We are not a volume-based marketing agency.</p>
+    <section id="who-we-are" class="section reveal">
+      <div class="container">
+        <div class="grid grid-2 who-we-are-grid">
+          <div class="who-we-are-content">
+            <span class="label">Digital Growth Partner</span>
+            <h2 class="title-main">We don't just 'consult'. <br/><span class="accent-text serif-text">We take ownership.</span></h2>
+            <p class="description-main">
+              Most agencies focus on clicks. We focus on <span class="highlight-text">business outcomes</span>. 
+              DreamNXT.ai was built for companies that want a specialized partner to manage 
+              their entire digital footprint—from high-converting performance ads to 
+              AI-automated sales systems.
+            </p>
+          </div>
+          <div class="highlight-box-container">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Accountability</span>
             </div>
-            <div class="highlight-box">
-              <p>We take ownership of your online presence, lead flow, and performance. By intentionally working with fewer clients, we stay hands-on with strategy and execution.</p>
-              <span class="outcome-text">Our success is measured by business outcomes, not likes or impressions.</span>
+            <div class="stat-item">
+              <span class="stat-number">Premium</span>
+              <span class="stat-label">Execution</span>
             </div>
           </div>
         </div>
@@ -287,4 +296,4 @@
   <div class="floating-cta">
     <a href="#" class="btn btn-glass book-trigger">Book Strategy Call</a>
   </div>
-`;window.addEventListener("scroll",()=>{const e=document.querySelector(".floating-cta");window.scrollY>500?e==null||e.classList.add("visible"):e==null||e.classList.remove("visible")});const l=document.getElementById("booking-modal"),o=document.querySelector(".modal-close");document.querySelectorAll(".book-trigger").forEach(e=>{e.addEventListener("click",a=>{a.preventDefault(),l.style.display="flex",document.body.style.overflow="hidden"})});o==null||o.addEventListener("click",()=>{l.style.display="none",document.body.style.overflow="auto"});l==null||l.addEventListener("click",e=>{e.target===l&&(l.style.display="none",document.body.style.overflow="auto")});window.addEventListener("scroll",()=>{const e=document.querySelector(".header");window.scrollY>50?e==null||e.classList.add("scrolled"):e==null||e.classList.remove("scrolled")});const c={threshold:.1},d=new IntersectionObserver(e=>{e.forEach(a=>{a.isIntersecting&&a.target.classList.add("visible")})},c);document.querySelectorAll(".reveal").forEach(e=>d.observe(e));lucide.createIcons();
+`;window.addEventListener("scroll",()=>{const e=document.querySelector(".floating-cta");window.scrollY>500?e==null||e.classList.add("visible"):e==null||e.classList.remove("visible")});const l=document.getElementById("booking-modal"),o=document.querySelector(".modal-close");document.querySelectorAll(".book-trigger").forEach(e=>{e.addEventListener("click",a=>{a.preventDefault(),l.style.display="flex",document.body.style.overflow="hidden"})});o==null||o.addEventListener("click",()=>{l.style.display="none",document.body.style.overflow="auto"});l==null||l.addEventListener("click",e=>{e.target===l&&(l.style.display="none",document.body.style.overflow="auto")});window.addEventListener("scroll",()=>{const e=document.querySelector(".header");window.scrollY>50?e==null||e.classList.add("scrolled"):e==null||e.classList.remove("scrolled")});const r={threshold:.1},d=new IntersectionObserver(e=>{e.forEach(a=>{a.isIntersecting&&a.target.classList.add("visible")})},r);document.querySelectorAll(".reveal").forEach(e=>d.observe(e));lucide.createIcons();
