@@ -270,15 +270,44 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer reveal">
     <div class="container">
        <div class="footer-grid">
-         <div class="footer-info">
+         <div class="footer-brand">
            <div class="logo"><img src="/logo.png" alt="DreamNXT.ai" class="logo-img"></div>
-           <p>Few clients. Deep focus. Committed ROI.</p>
+           <p>Few clients. Deep focus. <br/>Committed ROI.</p>
          </div>
-         <div class="footer-note">
-           <p>Ad and media spend is paid directly by the client. Our fee covers strategy, execution, AI systems, optimization, and accountability.</p>
+         <div class="footer-col">
+           <h4>Navigation</h4>
+           <ul>
+             <li><a href="#who-we-are">Who We Are</a></li>
+             <li><a href="#services">What We Do</a></li>
+             <li><a href="#how-we-work">Our Process</a></li>
+             <li><a href="#packages">Packages</a></li>
+           </ul>
+         </div>
+         <div class="footer-col">
+           <h4>What We Do</h4>
+           <ul>
+             <li><a href="#services">Website & SEO</a></li>
+             <li><a href="#services">Social & AI Content</a></li>
+             <li><a href="#services">Performance Ads</a></li>
+             <li><a href="#services">Sales CRM & Automation</a></li>
+           </ul>
+         </div>
+         <div class="footer-col">
+           <h4>Support</h4>
+           <ul>
+             <li><a href="#">Privacy Policy</a></li>
+             <li><a href="#">Terms of Service</a></li>
+             <li><a href="mailto:hello@dreamnxt.ai">hello@dreamnxt.ai</a></li>
+           </ul>
+         </div>
+       </div>
+       <div class="footer-bottom">
+         <p>&copy; 2026 DreamNXT.ai. All rights reserved.</p>
+         <div class="footer-disclaimer">
+           Ad and media spend is paid directly by the client. Our fee covers strategy, execution, AI systems, and results.
          </div>
        </div>
     </div>

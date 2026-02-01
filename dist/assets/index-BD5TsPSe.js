@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))n(i);new MutationObserver(i=>{for(const s of i)if(s.type==="childList")for(const t of s.addedNodes)t.tagName==="LINK"&&t.rel==="modulepreload"&&n(t)}).observe(document,{childList:!0,subtree:!0});function c(i){const s={};return i.integrity&&(s.integrity=i.integrity),i.referrerPolicy&&(s.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?s.credentials="include":i.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(i){if(i.ep)return;i.ep=!0;const s=c(i);fetch(i.href,s)}})();document.querySelector("#app").innerHTML=`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))r(i);new MutationObserver(i=>{for(const s of i)if(s.type==="childList")for(const t of s.addedNodes)t.tagName==="LINK"&&t.rel==="modulepreload"&&r(t)}).observe(document,{childList:!0,subtree:!0});function c(i){const s={};return i.integrity&&(s.integrity=i.integrity),i.referrerPolicy&&(s.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?s.credentials="include":i.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function r(i){if(i.ep)return;i.ep=!0;const s=c(i);fetch(i.href,s)}})();document.querySelector("#app").innerHTML=`
   <header class="header">
     <div class="container">
       <nav class="nav">
@@ -268,15 +268,44 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer reveal">
     <div class="container">
        <div class="footer-grid">
-         <div class="footer-info">
+         <div class="footer-brand">
            <div class="logo"><img src="/logo.png" alt="DreamNXT.ai" class="logo-img"></div>
-           <p>Few clients. Deep focus. Committed ROI.</p>
+           <p>Few clients. Deep focus. <br/>Committed ROI.</p>
          </div>
-         <div class="footer-note">
-           <p>Ad and media spend is paid directly by the client. Our fee covers strategy, execution, AI systems, optimization, and accountability.</p>
+         <div class="footer-col">
+           <h4>Navigation</h4>
+           <ul>
+             <li><a href="#who-we-are">Who We Are</a></li>
+             <li><a href="#services">What We Do</a></li>
+             <li><a href="#how-we-work">Our Process</a></li>
+             <li><a href="#packages">Packages</a></li>
+           </ul>
+         </div>
+         <div class="footer-col">
+           <h4>What We Do</h4>
+           <ul>
+             <li><a href="#services">Website & SEO</a></li>
+             <li><a href="#services">Social & AI Content</a></li>
+             <li><a href="#services">Performance Ads</a></li>
+             <li><a href="#services">Sales CRM & Automation</a></li>
+           </ul>
+         </div>
+         <div class="footer-col">
+           <h4>Support</h4>
+           <ul>
+             <li><a href="#">Privacy Policy</a></li>
+             <li><a href="#">Terms of Service</a></li>
+             <li><a href="mailto:hello@dreamnxt.ai">hello@dreamnxt.ai</a></li>
+           </ul>
+         </div>
+       </div>
+       <div class="footer-bottom">
+         <p>&copy; 2026 DreamNXT.ai. All rights reserved.</p>
+         <div class="footer-disclaimer">
+           Ad and media spend is paid directly by the client. Our fee covers strategy, execution, AI systems, and results.
          </div>
        </div>
     </div>
@@ -296,4 +325,4 @@
   <div class="floating-cta">
     <a href="#" class="btn btn-glass book-trigger">Book Strategy Call</a>
   </div>
-`;window.addEventListener("scroll",()=>{const e=document.querySelector(".floating-cta");window.scrollY>500?e==null||e.classList.add("visible"):e==null||e.classList.remove("visible")});const l=document.getElementById("booking-modal"),o=document.querySelector(".modal-close");document.querySelectorAll(".book-trigger").forEach(e=>{e.addEventListener("click",a=>{a.preventDefault(),l.style.display="flex",document.body.style.overflow="hidden"})});o==null||o.addEventListener("click",()=>{l.style.display="none",document.body.style.overflow="auto"});l==null||l.addEventListener("click",e=>{e.target===l&&(l.style.display="none",document.body.style.overflow="auto")});window.addEventListener("scroll",()=>{const e=document.querySelector(".header");window.scrollY>50?e==null||e.classList.add("scrolled"):e==null||e.classList.remove("scrolled")});const r={threshold:.1},d=new IntersectionObserver(e=>{e.forEach(a=>{a.isIntersecting&&a.target.classList.add("visible")})},r);document.querySelectorAll(".reveal").forEach(e=>d.observe(e));lucide.createIcons();
+`;window.addEventListener("scroll",()=>{const e=document.querySelector(".floating-cta");window.scrollY>500?e==null||e.classList.add("visible"):e==null||e.classList.remove("visible")});const l=document.getElementById("booking-modal"),o=document.querySelector(".modal-close");document.querySelectorAll(".book-trigger").forEach(e=>{e.addEventListener("click",a=>{a.preventDefault(),l.style.display="flex",document.body.style.overflow="hidden"})});o==null||o.addEventListener("click",()=>{l.style.display="none",document.body.style.overflow="auto"});l==null||l.addEventListener("click",e=>{e.target===l&&(l.style.display="none",document.body.style.overflow="auto")});window.addEventListener("scroll",()=>{const e=document.querySelector(".header");window.scrollY>50?e==null||e.classList.add("scrolled"):e==null||e.classList.remove("scrolled")});const n={threshold:.1},d=new IntersectionObserver(e=>{e.forEach(a=>{a.isIntersecting&&a.target.classList.add("visible")})},n);document.querySelectorAll(".reveal").forEach(e=>d.observe(e));lucide.createIcons();
