@@ -1,8 +1,8 @@
-(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))t(e);new MutationObserver(e=>{for(const i of e)if(i.type==="childList")for(const l of i.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&t(l)}).observe(document,{childList:!0,subtree:!0});function c(e){const i={};return e.integrity&&(i.integrity=e.integrity),e.referrerPolicy&&(i.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?i.credentials="include":e.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function t(e){if(e.ep)return;e.ep=!0;const i=c(e);fetch(e.href,i)}})();document.querySelector("#app").innerHTML=`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))n(i);new MutationObserver(i=>{for(const s of i)if(s.type==="childList")for(const t of s.addedNodes)t.tagName==="LINK"&&t.rel==="modulepreload"&&n(t)}).observe(document,{childList:!0,subtree:!0});function r(i){const s={};return i.integrity&&(s.integrity=i.integrity),i.referrerPolicy&&(s.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?s.credentials="include":i.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(i){if(i.ep)return;i.ep=!0;const s=r(i);fetch(i.href,s)}})();document.querySelector("#app").innerHTML=`
   <header class="header">
     <div class="container">
       <nav class="nav">
-        <div class="logo">DreamNxt</div>
+        <div class="logo"><img src="/logo.png" alt="DreamNXT.ai" class="logo-img"></div>
         <div class="nav-links">
           <a href="#who-we-are">Who We Are</a>
           <a href="#services">What We Do</a>
@@ -17,14 +17,14 @@
   <main>
     <section id="hero" class="hero">
       <div class="hero-content reveal">
-        <p class="subtitle">Focus. Accountability. ROI.</p>
-        <h1>We Manage Your Entire<br/><span class="accent">Digital Growth</span></h1>
+        <p class="subtitle" style="font-weight: 700; color: var(--accent-primary);">Focus. Accountability. ROI.</p>
+        <h1>Your Entire<br/><span class="accent">Digital Growth</span></h1>
         <p class="description">
-          We are a social media and digital sales management consultancy working 
-          with a limited number of clients to deliver measurable results.
+          A social media and digital sales management consultancy working 
+          with a <span class="serif-text">limited number of clients</span> to deliver measurable results.
         </p>
         <div class="hero-btns">
-          <a href="#cta-block" class="btn btn-primary">Book a Strategy Call</a>
+          <a href="#" class="btn btn-primary book-trigger">Book a Strategy Call</a>
         </div>
       </div>
       <div class="hero-bg-glow"></div>
@@ -119,6 +119,45 @@
       </div>
     </section>
 
+    <section id="roadmap" class="section">
+      <div class="container">
+        <div class="services-header reveal">
+          <span class="label">The Roadmap</span>
+          <h2>Your Path to Digital Dominance</h2>
+        </div>
+        <div class="roadmap-grid">
+          <div class="roadmap-step reveal" style="animation-delay: 0.1s">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h4>Audit & Alignment</h4>
+              <p>We analyze your existing presence and align on business outcomes, not just metrics.</p>
+            </div>
+          </div>
+          <div class="roadmap-step reveal" style="animation-delay: 0.2s">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h4>Infrastructure Optimization</h4>
+              <p>Building the foundation: Website conversion, SEO/AEO setup, and CRM integration.</p>
+            </div>
+          </div>
+          <div class="roadmap-step reveal" style="animation-delay: 0.3s">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h4>Growth Engine Launch</h4>
+              <p>Content clusters, AI-driven creatives, and high-performance ad campaigns go live.</p>
+            </div>
+          </div>
+          <div class="roadmap-step reveal" style="animation-delay: 0.4s">
+            <div class="step-number">04</div>
+            <div class="step-content">
+              <h4>Scale & Automate</h4>
+              <p>Continuous optimization and implementing automated engagement systems to handle scale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="how-we-work" class="section">
       <div class="container reveal">
         <div class="how-we-work-card">
@@ -169,7 +208,7 @@
               <li>AI-generated posts</li>
               <li>Basic ads management</li>
             </ul>
-            <a href="#cta-block" class="btn btn-outline">Choose Plan</a>
+            <a href="#" class="btn btn-outline book-trigger">Choose Plan</a>
           </div>
           <div class="package-card reveal green featured" style="animation-delay: 0.2s">
             <div class="package-badge">Most Chosen</div>
@@ -185,7 +224,7 @@
               <li>WhatsApp automation</li>
               <li>Lead flow & sales support</li>
             </ul>
-            <a href="#cta-block" class="btn btn-primary">Choose Plan</a>
+            <a href="#" class="btn btn-primary book-trigger">Choose Plan</a>
           </div>
           <div class="package-card reveal purple" style="animation-delay: 0.3s">
             <div class="package-header">
@@ -200,7 +239,7 @@
               <li>Weekly reviews</li>
               <li>Priority execution</li>
             </ul>
-            <a href="#cta-block" class="btn btn-outline">Choose Plan</a>
+            <a href="#" class="btn btn-outline book-trigger">Choose Plan</a>
           </div>
         </div>
       </div>
@@ -212,7 +251,7 @@
           <h2>Let's Talk</h2>
           <p>If you want a focused partner who manages digital growth like a business function, not a side task, let’s connect.</p>
           <div class="hero-btns">
-            <a href="#" class="btn btn-primary">Book a Strategy Call</a>
+            <a href="#" class="btn btn-primary book-trigger">Book a Strategy Call</a>
             <a href="#" class="btn btn-outline">Contact Us</a>
           </div>
         </div>
@@ -224,7 +263,7 @@
     <div class="container">
        <div class="footer-grid">
          <div class="footer-info">
-           <div class="logo">DreamNxt</div>
+           <div class="logo"><img src="/logo.png" alt="DreamNXT.ai" class="logo-img"></div>
            <p>Few clients. Deep focus. Committed ROI.</p>
          </div>
          <div class="footer-note">
@@ -233,4 +272,19 @@
        </div>
     </div>
   </footer>
-`;const r={threshold:.1},o=new IntersectionObserver(a=>{a.forEach(s=>{s.isIntersecting&&s.target.classList.add("visible")})},r);document.querySelectorAll(".reveal").forEach(a=>o.observe(a));lucide.createIcons();
+
+  <div id="booking-modal" class="modal-overlay">
+    <div class="modal">
+      <button class="modal-close">&times;</button>
+      <div class="booking-container">
+        <h2>Schedule Your Strategy Call</h2>
+        <p>Choose a time that works for you.</p>
+        <div style="margin-top: 2rem; background: var(--surface-accent); height: 400px; border-radius: 1rem; display: flex; align-items: center; justify-content: center;">
+          <p style="color: var(--text-muted)">Calendly / Booking Widget will load here</p>
+        </div>
+      </div>
+    </div>
+  <div class="floating-cta">
+    <a href="#" class="btn btn-glass book-trigger">Book Strategy Call</a>
+  </div>
+`;window.addEventListener("scroll",()=>{const e=document.querySelector(".floating-cta");window.scrollY>500?e==null||e.classList.add("visible"):e==null||e.classList.remove("visible")});const l=document.getElementById("booking-modal"),o=document.querySelector(".modal-close");document.querySelectorAll(".book-trigger").forEach(e=>{e.addEventListener("click",a=>{a.preventDefault(),l.style.display="flex",document.body.style.overflow="hidden"})});o==null||o.addEventListener("click",()=>{l.style.display="none",document.body.style.overflow="auto"});l==null||l.addEventListener("click",e=>{e.target===l&&(l.style.display="none",document.body.style.overflow="auto")});window.addEventListener("scroll",()=>{const e=document.querySelector(".header");window.scrollY>50?e==null||e.classList.add("scrolled"):e==null||e.classList.remove("scrolled")});const c={threshold:.1},d=new IntersectionObserver(e=>{e.forEach(a=>{a.isIntersecting&&a.target.classList.add("visible")})},c);document.querySelectorAll(".reveal").forEach(e=>d.observe(e));lucide.createIcons();

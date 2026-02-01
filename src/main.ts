@@ -4,7 +4,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <header class="header">
     <div class="container">
       <nav class="nav">
-        <div class="logo">DreamNxt</div>
+        <div class="logo"><img src="/logo.png" alt="DreamNXT.ai" class="logo-img"></div>
         <div class="nav-links">
           <a href="#who-we-are">Who We Are</a>
           <a href="#services">What We Do</a>
@@ -19,14 +19,14 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <main>
     <section id="hero" class="hero">
       <div class="hero-content reveal">
-        <p class="subtitle">Focus. Accountability. ROI.</p>
-        <h1>We Manage Your Entire<br/><span class="accent">Digital Growth</span></h1>
+        <p class="subtitle" style="font-weight: 700; color: var(--accent-primary);">Focus. Accountability. ROI.</p>
+        <h1>Your Entire<br/><span class="accent">Digital Growth</span></h1>
         <p class="description">
-          We are a social media and digital sales management consultancy working 
-          with a limited number of clients to deliver measurable results.
+          A social media and digital sales management consultancy working 
+          with a <span class="serif-text">limited number of clients</span> to deliver measurable results.
         </p>
         <div class="hero-btns">
-          <a href="#cta-block" class="btn btn-primary">Book a Strategy Call</a>
+          <a href="#" class="btn btn-primary book-trigger">Book a Strategy Call</a>
         </div>
       </div>
       <div class="hero-bg-glow"></div>
@@ -121,6 +121,45 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       </div>
     </section>
 
+    <section id="roadmap" class="section">
+      <div class="container">
+        <div class="services-header reveal">
+          <span class="label">The Roadmap</span>
+          <h2>Your Path to Digital Dominance</h2>
+        </div>
+        <div class="roadmap-grid">
+          <div class="roadmap-step reveal" style="animation-delay: 0.1s">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h4>Audit & Alignment</h4>
+              <p>We analyze your existing presence and align on business outcomes, not just metrics.</p>
+            </div>
+          </div>
+          <div class="roadmap-step reveal" style="animation-delay: 0.2s">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h4>Infrastructure Optimization</h4>
+              <p>Building the foundation: Website conversion, SEO/AEO setup, and CRM integration.</p>
+            </div>
+          </div>
+          <div class="roadmap-step reveal" style="animation-delay: 0.3s">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h4>Growth Engine Launch</h4>
+              <p>Content clusters, AI-driven creatives, and high-performance ad campaigns go live.</p>
+            </div>
+          </div>
+          <div class="roadmap-step reveal" style="animation-delay: 0.4s">
+            <div class="step-number">04</div>
+            <div class="step-content">
+              <h4>Scale & Automate</h4>
+              <p>Continuous optimization and implementing automated engagement systems to handle scale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="how-we-work" class="section">
       <div class="container reveal">
         <div class="how-we-work-card">
@@ -171,7 +210,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
               <li>AI-generated posts</li>
               <li>Basic ads management</li>
             </ul>
-            <a href="#cta-block" class="btn btn-outline">Choose Plan</a>
+            <a href="#" class="btn btn-outline book-trigger">Choose Plan</a>
           </div>
           <div class="package-card reveal green featured" style="animation-delay: 0.2s">
             <div class="package-badge">Most Chosen</div>
@@ -187,7 +226,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
               <li>WhatsApp automation</li>
               <li>Lead flow & sales support</li>
             </ul>
-            <a href="#cta-block" class="btn btn-primary">Choose Plan</a>
+            <a href="#" class="btn btn-primary book-trigger">Choose Plan</a>
           </div>
           <div class="package-card reveal purple" style="animation-delay: 0.3s">
             <div class="package-header">
@@ -202,7 +241,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
               <li>Weekly reviews</li>
               <li>Priority execution</li>
             </ul>
-            <a href="#cta-block" class="btn btn-outline">Choose Plan</a>
+            <a href="#" class="btn btn-outline book-trigger">Choose Plan</a>
           </div>
         </div>
       </div>
@@ -214,7 +253,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <h2>Let's Talk</h2>
           <p>If you want a focused partner who manages digital growth like a business function, not a side task, let’s connect.</p>
           <div class="hero-btns">
-            <a href="#" class="btn btn-primary">Book a Strategy Call</a>
+            <a href="#" class="btn btn-primary book-trigger">Book a Strategy Call</a>
             <a href="#" class="btn btn-outline">Contact Us</a>
           </div>
         </div>
@@ -226,7 +265,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div class="container">
        <div class="footer-grid">
          <div class="footer-info">
-           <div class="logo">DreamNxt</div>
+           <div class="logo"><img src="/logo.png" alt="DreamNXT.ai" class="logo-img"></div>
            <p>Few clients. Deep focus. Committed ROI.</p>
          </div>
          <div class="footer-note">
@@ -235,7 +274,66 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
        </div>
     </div>
   </footer>
+
+  <div id="booking-modal" class="modal-overlay">
+    <div class="modal">
+      <button class="modal-close">&times;</button>
+      <div class="booking-container">
+        <h2>Schedule Your Strategy Call</h2>
+        <p>Choose a time that works for you.</p>
+        <div style="margin-top: 2rem; background: var(--surface-accent); height: 400px; border-radius: 1rem; display: flex; align-items: center; justify-content: center;">
+          <p style="color: var(--text-muted)">Calendly / Booking Widget will load here</p>
+        </div>
+      </div>
+    </div>
+  <div class="floating-cta">
+    <a href="#" class="btn btn-glass book-trigger">Book Strategy Call</a>
+  </div>
 `
+
+// Scroll logic for Floating CTA
+window.addEventListener('scroll', () => {
+  const floatingCta = document.querySelector('.floating-cta');
+  if (window.scrollY > 500) {
+    floatingCta?.classList.add('visible');
+  } else {
+    floatingCta?.classList.remove('visible');
+  }
+});
+
+// Modal Logic
+const modal = document.getElementById('booking-modal') as HTMLElement;
+const closeBtn = document.querySelector('.modal-close') as HTMLElement;
+
+document.querySelectorAll('.book-trigger').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+closeBtn?.addEventListener('click', () => {
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto';
+});
+
+modal?.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+});
+
+// Header scroll effect
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 50) {
+    header?.classList.add('scrolled');
+  } else {
+    header?.classList.remove('scrolled');
+  }
+});
 
 // Simple reveal logic
 const observerOptions = {
