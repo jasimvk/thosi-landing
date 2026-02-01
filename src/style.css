@@ -223,6 +223,55 @@ h4 {
     width: 100%;
 }
 
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: var(--transition-smooth);
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent-primary);
+    transition: var(--transition-smooth);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -844,7 +893,7 @@ h4 {
 
 @media (max-width: 768px) {
     .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 3rem;
         text-align: center;
     }
@@ -852,6 +901,126 @@ h4 {
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+        gap: 2rem;
+    }
+}
+
+/* Mobile Navigation Overlay & Global Responsive Refinements */
+body.menu-open {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        padding: 4rem 2rem;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--text-primary);
+    }
+
+    .nav-cta {
+        margin-top: 1rem;
+        width: auto !important;
+        padding: 1.2rem 2.5rem !important;
+    }
+
+    /* Grid & Spacing Overrides */
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .section {
+        padding: 6rem 1.5rem;
+    }
+
+    /* Hero Refinement */
+    .hero {
+        padding-top: 10rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 15vw, 4.5rem);
+        line-height: 1;
+    }
+
+    .hero .description {
+        font-size: 1.1rem;
+    }
+
+    /* Who We Are Refinement */
+    .who-we-are-grid {
+        gap: 4rem;
+    }
+
+    .highlight-box-container {
+        padding: 2.5rem;
+    }
+
+    /* Roadmap Refinement */
+    .roadmap-step {
+        padding-left: 0;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .step-number {
+        position: static;
+        width: 54px;
+        height: 54px;
+        font-size: 1.2rem;
+    }
+
+    .roadmap-grid::before {
+        display: none;
+    }
+
+    /* Packages & Cards */
+    .package-card.featured {
+        transform: none !important;
+    }
+
+    /* CTA Section */
+    .cta-box {
+        padding: 5rem 2rem;
+    }
+
+    /* Floating CTA Utility */
+    .floating-cta {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .floating-cta .btn {
+        width: 100%;
+        justify-content: center;
     }
 }
 

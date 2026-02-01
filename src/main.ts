@@ -12,6 +12,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <a href="#packages">Packages</a>
           <a href="#cta-block" class="nav-cta">Book a Call</a>
         </div>
+        <button class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </div>
   </header>
@@ -326,6 +331,25 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <a href="#" class="btn btn-glass book-trigger">Book Strategy Call</a>
   </div>
 `
+
+// Mobile Menu Logic
+const menuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+menuBtn?.addEventListener('click', () => {
+  menuBtn.classList.toggle('active');
+  navLinks?.classList.toggle('active');
+  document.body.classList.toggle('menu-open');
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuBtn?.classList.remove('active');
+    navLinks?.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  });
+});
 
 // Scroll logic for Floating CTA
 window.addEventListener('scroll', () => {

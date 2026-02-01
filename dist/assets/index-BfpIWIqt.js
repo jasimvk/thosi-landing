@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))r(i);new MutationObserver(i=>{for(const s of i)if(s.type==="childList")for(const t of s.addedNodes)t.tagName==="LINK"&&t.rel==="modulepreload"&&r(t)}).observe(document,{childList:!0,subtree:!0});function c(i){const s={};return i.integrity&&(s.integrity=i.integrity),i.referrerPolicy&&(s.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?s.credentials="include":i.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function r(i){if(i.ep)return;i.ep=!0;const s=c(i);fetch(i.href,s)}})();document.querySelector("#app").innerHTML=`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))n(i);new MutationObserver(i=>{for(const s of i)if(s.type==="childList")for(const c of s.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&n(c)}).observe(document,{childList:!0,subtree:!0});function d(i){const s={};return i.integrity&&(s.integrity=i.integrity),i.referrerPolicy&&(s.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?s.credentials="include":i.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(i){if(i.ep)return;i.ep=!0;const s=d(i);fetch(i.href,s)}})();document.querySelector("#app").innerHTML=`
   <header class="header">
     <div class="container">
       <nav class="nav">
@@ -10,6 +10,11 @@
           <a href="#packages">Packages</a>
           <a href="#cta-block" class="nav-cta">Book a Call</a>
         </div>
+        <button class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </div>
   </header>
@@ -323,4 +328,4 @@
   <div class="floating-cta">
     <a href="#" class="btn btn-glass book-trigger">Book Strategy Call</a>
   </div>
-`;window.addEventListener("scroll",()=>{const e=document.querySelector(".floating-cta");window.scrollY>500?e==null||e.classList.add("visible"):e==null||e.classList.remove("visible")});const l=document.getElementById("booking-modal"),o=document.querySelector(".modal-close");document.querySelectorAll(".book-trigger").forEach(e=>{e.addEventListener("click",a=>{a.preventDefault(),l.style.display="flex",document.body.style.overflow="hidden"})});o==null||o.addEventListener("click",()=>{l.style.display="none",document.body.style.overflow="auto"});l==null||l.addEventListener("click",e=>{e.target===l&&(l.style.display="none",document.body.style.overflow="auto")});window.addEventListener("scroll",()=>{const e=document.querySelector(".header");window.scrollY>50?e==null||e.classList.add("scrolled"):e==null||e.classList.remove("scrolled")});const n={threshold:.1},d=new IntersectionObserver(e=>{e.forEach(a=>{a.isIntersecting&&a.target.classList.add("visible")})},n);document.querySelectorAll(".reveal").forEach(e=>d.observe(e));lucide.createIcons();
+`;const t=document.querySelector(".mobile-menu-btn"),o=document.querySelector(".nav-links");t==null||t.addEventListener("click",()=>{t.classList.toggle("active"),o==null||o.classList.toggle("active"),document.body.classList.toggle("menu-open")});document.querySelectorAll(".nav-links a").forEach(e=>{e.addEventListener("click",()=>{t==null||t.classList.remove("active"),o==null||o.classList.remove("active"),document.body.classList.remove("menu-open")})});window.addEventListener("scroll",()=>{const e=document.querySelector(".floating-cta");window.scrollY>500?e==null||e.classList.add("visible"):e==null||e.classList.remove("visible")});const l=document.getElementById("booking-modal"),r=document.querySelector(".modal-close");document.querySelectorAll(".book-trigger").forEach(e=>{e.addEventListener("click",a=>{a.preventDefault(),l.style.display="flex",document.body.style.overflow="hidden"})});r==null||r.addEventListener("click",()=>{l.style.display="none",document.body.style.overflow="auto"});l==null||l.addEventListener("click",e=>{e.target===l&&(l.style.display="none",document.body.style.overflow="auto")});window.addEventListener("scroll",()=>{const e=document.querySelector(".header");window.scrollY>50?e==null||e.classList.add("scrolled"):e==null||e.classList.remove("scrolled")});const v={threshold:.1},u=new IntersectionObserver(e=>{e.forEach(a=>{a.isIntersecting&&a.target.classList.add("visible")})},v);document.querySelectorAll(".reveal").forEach(e=>u.observe(e));lucide.createIcons();
