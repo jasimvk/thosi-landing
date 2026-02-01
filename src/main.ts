@@ -319,9 +319,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <div class="booking-container">
         <h2>Schedule Your Strategy Call</h2>
         <p>Choose a time that works for you.</p>
-        <div style="margin-top: 2rem; background: var(--surface-accent); height: 400px; border-radius: 1rem; display: flex; align-items: center; justify-content: center;">
-          <p style="color: var(--text-muted)">Calendly / Booking Widget will load here</p>
-        </div>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/dreamnxt-ai/30min" style="min-width:320px;height:700px;"></div>
       </div>
     </div>
   <div class="floating-cta">

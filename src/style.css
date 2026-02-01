@@ -509,13 +509,29 @@ h4 {
 
 .modal {
     background: var(--surface-color);
-    width: 90%;
-    max-width: 800px;
+    width: 95%;
+    max-width: 900px;
+    max-height: 90vh;
     border-radius: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
     animation: fadeInUp 0.5s forwards;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background: var(--surface-accent);
+    border-radius: 4px;
 }
 
 .modal-close {
@@ -747,6 +763,77 @@ h4 {
     font-size: 0.85rem;
     color: var(--text-muted);
     line-height: 1.6;
+}
+
+.who-we-are-grid {
+    align-items: center;
+    gap: 6rem;
+    padding: 6rem 0;
+}
+
+.title-main {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 2rem;
+}
+
+.description-main {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.highlight-box-container {
+    padding: 3.5rem;
+    background: var(--surface-accent);
+    border-radius: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 800;
+    color: var(--accent-primary);
+    line-height: 1;
+}
+
+.stat-item:last-child .stat-number {
+    color: var(--accent-secondary);
+}
+
+.stat-label {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .who-we-are-grid {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .who-we-are-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 2rem 0;
+    }
+
+    .highlight-box-container {
+        padding: 2.5rem;
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 1024px) {
