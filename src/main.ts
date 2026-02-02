@@ -1,64 +1,62 @@
 import './style.css'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+  <div id="custom-cursor"></div>
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
   <header class="header">
     <div class="container">
       <nav class="nav">
         <div class="logo"><img src="/logo.png" alt="DreamNXT.ai" class="logo-img"></div>
         <div class="nav-links">
-          <a href="#who-we-are">Who We Are</a>
-          <a href="#services">What We Do</a>
-          <a href="#how-we-work">How We Work</a>
-          <a href="#packages">Packages</a>
-          <a href="#cta-block" class="nav-cta">Book a Call</a>
+          <a href="#who-we-are">Strategy</a>
+          <a href="#services">Expertise</a>
+          <a href="#roadmap">Process</a>
+          <a href="#packages">Retainers</a>
         </div>
-        <button class="mobile-menu-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="magnetic-wrap">
+          <a href="#cta-block" class="btn btn-glass nav-cta book-trigger">Book Call</a>
+        </div>
       </nav>
     </div>
   </header>
 
   <main>
-    <section id="hero" class="hero">
-      <div class="hero-content reveal">
+    <section id="hero" class="hero reveal">
+      <div class="hero-content">
         <p class="subtitle">Focus. Accountability. ROI.</p>
-        <h1>Your Entire<br/><span class="accent">Digital Growth</span></h1>
+        <h1>Engineering<br/><span class="accent">Digital Growth</span></h1>
         <p class="description">
-          A social media and digital sales management consultancy working 
-          with a <span class="serif-text">limited number of clients</span> to deliver measurable results.
+          A high-performance sales and growth consultancy working 
+          exclusively with a <span class="serif-text">limited circle of clients</span> to drive uncapped revenue.
         </p>
-        <div class="hero-btns">
-          <a href="#" class="btn btn-primary book-trigger">Book a Strategy Call</a>
+        <div class="magnetic-wrap">
+          <a href="#" class="btn btn-primary book-trigger">Start Your Growth Engine</a>
         </div>
       </div>
-      <div class="hero-bg-glow"></div>
     </section>
 
-    <section id="who-we-are" class="section reveal">
+    <section id="who-we-are" class="section">
       <div class="container">
-        <div class="grid grid-2 who-we-are-grid">
+        <div class="grid grid-2 reveal">
           <div class="who-we-are-content">
-            <span class="label">Digital Growth Partner</span>
-            <h2 class="title-main">We don't just 'consult'. <br/><span class="accent-text serif-text">We take ownership.</span></h2>
+            <span class="label">Our Philosophy</span>
+            <h2 class="title-main">We don't consult.<br/><span class="accent-text serif-text">We take ownership.</span></h2>
             <p class="description-main">
-              Most agencies focus on clicks. We focus on <span class="highlight-text">business outcomes</span>. 
-              DreamNXT.ai was built for companies that want a specialized partner to manage 
-              their entire digital footprint—from high-converting performance ads to 
-              AI-automated sales systems.
+              Most agencies trade on activity. We trade on <span class="highlight-text">outcomes</span>. 
+              DreamNXT.ai is a specialized partner for founders who want high-converting performance ads 
+              and AI-driven sales systems that operate 24/7.
             </p>
           </div>
-          <div class="highlight-box-container">
-            <div class="stat-item">
-              <span class="stat-number">100%</span>
-              <span class="stat-label">Accountability</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">Premium</span>
-              <span class="stat-label">Execution</span>
-            </div>
+          <div class="service-card featured">
+             <div class="price">100%</div>
+             <p class="stat-label">Ownership of Lead Flow</p>
+             <hr style="opacity: 0.1; margin: 2rem 0"/>
+             <div class="price">Zero</div>
+             <p class="stat-label">Empty Marketing Activity</p>
           </div>
         </div>
       </div>
@@ -66,69 +64,36 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <section id="services" class="section">
       <div class="container">
-        <div class="services-header reveal">
-          <span class="label">Our Services</span>
-          <h2>End-to-End Digital Management</h2>
+        <div class="section-title-wrap reveal">
+          <span class="label">Expertise</span>
+          <h2>Dominating Every Touchpoint</h2>
         </div>
         <div class="grid grid-3">
-          <div class="service-card reveal" style="animation-delay: 0.1s">
-            <div class="service-icon"><i data-lucide="search"></i></div>
-            <h3>Website & SEO</h3>
+          <div class="service-card reveal" style="transition-delay: 0.1s">
+            <div class="service-icon"><i data-lucide="layout"></i></div>
+            <h3>Conversion Architecture</h3>
             <ul class="service-list">
-              <li>Conversion optimization</li>
-              <li>SEO for Google ranking</li>
-              <li>AEO for AI & Voice search</li>
-              <li>Intent-based structure</li>
+              <li>High-converting landing pages</li>
+              <li>Intent-based SEO & AEO</li>
+              <li>UX Performance optimization</li>
             </ul>
           </div>
-          <div class="service-card reveal" style="animation-delay: 0.2s">
-            <div class="service-icon"><i data-lucide="share-2"></i></div>
-            <h3>Social Media</h3>
+          <div class="service-card reveal" style="transition-delay: 0.2s">
+            <div class="service-icon"><i data-lucide="cpu"></i></div>
+            <h3>AI Growth Systems</h3>
             <ul class="service-list">
-              <li>Facebook & Instagram</li>
-              <li>YouTube & Google Business</li>
-              <li>Content planning</li>
-              <li>Brand consistency</li>
+              <li>WhatsApp automated sales</li>
+              <li>AI Content generation</li>
+              <li>Bot-led lead qualification</li>
             </ul>
           </div>
-          <div class="service-card reveal" style="animation-delay: 0.3s">
-            <div class="service-icon"><i data-lucide="trending-up"></i></div>
-            <h3>Paid Ads</h3>
+          <div class="service-card reveal" style="transition-delay: 0.3s">
+            <div class="service-icon"><i data-lucide="bar-chart-3"></i></div>
+            <h3>Paid Acquisition</h3>
             <ul class="service-list">
-              <li>Strategy & Creatives</li>
-              <li>Targeting & Testing</li>
-              <li>Performance & ROI</li>
-              <li>Scaling campaigns</li>
-            </ul>
-          </div>
-          <div class="service-card reveal" style="animation-delay: 0.1s">
-            <div class="service-icon"><i data-lucide="zap"></i></div>
-            <h3>AI Content</h3>
-            <ul class="service-list">
-              <li>Product posts & creatives</li>
-              <li>Short & long-form videos</li>
-              <li>Scripts & Ad copies</li>
-              <li>High-speed execution</li>
-            </ul>
-          </div>
-          <div class="service-card reveal" style="animation-delay: 0.2s">
-            <div class="service-icon"><i data-lucide="bot"></i></div>
-            <h3>Automation</h3>
-            <ul class="service-list">
-              <li>WhatsApp & FB bots</li>
-              <li>Lead capture logic</li>
-              <li>Inquiry handling</li>
-              <li>Automated follow-ups</li>
-            </ul>
-          </div>
-          <div class="service-card reveal" style="animation-delay: 0.3s">
-            <div class="service-icon"><i data-lucide="target"></i></div>
-            <h3>Sales Support</h3>
-            <ul class="service-list">
-              <li>Inquiry-to-sale conversion</li>
-              <li>Offer optimization</li>
-              <li>CRM & WhatsApp flow</li>
-              <li>Behavior alignment</li>
+              <li>Multi-platform ad scaling</li>
+              <li>Precision retargeting</li>
+              <li>Full ROI accountability</li>
             </ul>
           </div>
         </div>
@@ -137,183 +102,129 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <section id="roadmap" class="section">
       <div class="container">
-        <div class="services-header reveal">
-          <span class="label">The Roadmap</span>
-          <h2>Your Path to Digital Dominance</h2>
+        <div class="section-title-wrap reveal">
+          <span class="label">The Process</span>
+          <h2>Your 90-Day Roadmap</h2>
         </div>
         <div class="roadmap-grid">
-          <div class="roadmap-step reveal" style="animation-delay: 0.1s">
-            <div class="step-number">01</div>
+          <div class="roadmap-progress"></div>
+          <div class="roadmap-step reveal">
+            <div class="step-dot"></div>
             <div class="step-content">
-              <h4>Audit & Alignment</h4>
-              <p>We analyze your existing presence and align on business outcomes, not just metrics.</p>
+              <span class="label">Phase 01</span>
+              <h4>Deep Audit & Alignment</h4>
+              <p>We break down your existing unit economics and align on high-revenue business outcomes.</p>
             </div>
           </div>
-          <div class="roadmap-step reveal" style="animation-delay: 0.2s">
-            <div class="step-number">02</div>
+          <div class="roadmap-step reveal">
+            <div class="step-dot"></div>
             <div class="step-content">
-              <h4>Infrastructure Optimization</h4>
-              <p>Building the foundation: Website conversion, SEO/AEO setup, and CRM integration.</p>
+              <span class="label">Phase 02</span>
+              <h4>Foundation Hardening</h4>
+              <p>Deploying conversion-optimized infrastructure: Landing pages, SEO/AEO, and CRM logic.</p>
             </div>
           </div>
-          <div class="roadmap-step reveal" style="animation-delay: 0.3s">
-            <div class="step-number">03</div>
+          <div class="roadmap-step reveal">
+            <div class="step-dot"></div>
             <div class="step-content">
-              <h4>Growth Engine Launch</h4>
-              <p>Content clusters, AI-driven creatives, and high-performance ad campaigns go live.</p>
-            </div>
-          </div>
-          <div class="roadmap-step reveal" style="animation-delay: 0.4s">
-            <div class="step-number">04</div>
-            <div class="step-content">
+              <span class="label">Phase 03</span>
               <h4>Scale & Automate</h4>
-              <p>Continuous optimization and implementing automated engagement systems to handle scale.</p>
+              <p>Aggressive ad deployment paired with AI-automated engagement to handle incoming scale.</p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="how-we-work" class="section">
-      <div class="container reveal">
-        <div class="how-we-work-card">
-           <div class="grid grid-2" style="align-items: center;">
-              <div>
-                <span class="label">How We Work</span>
-                <h2>Focus Drives Results</h2>
-              </div>
-              <div class="grid grid-2 gap-small">
-                <div class="work-feature">
-                  <h4>Limited Clients</h4>
-                  <p>Quality over volume.</p>
-                </div>
-                <div class="work-feature">
-                  <h4>Hands-on</h4>
-                  <p>Deep involvement.</p>
-                </div>
-                <div class="work-feature">
-                  <h4>Data-Driven</h4>
-                  <p>No assumptions.</p>
-                </div>
-                <div class="work-feature">
-                  <h4>ROI Centric</h4>
-                  <p>Measurable outcomes.</p>
-                </div>
-              </div>
-           </div>
         </div>
       </div>
     </section>
 
     <section id="packages" class="section">
       <div class="container">
-        <div class="services-header reveal">
-          <span class="label">Our Packages</span>
-          <h2>Monthly Consultancy Retainers</h2>
+        <div class="section-title-wrap reveal">
+          <span class="label">Retainers</span>
+          <h2>Transparent Partnership</h2>
         </div>
-        <div class="grid grid-3" style="align-items: stretch;">
-          <div class="package-card reveal blue" style="animation-delay: 0.1s">
+        <div class="grid grid-3">
+          <div class="package-card reveal">
             <div class="package-header">
               <h3>Focused Growth</h3>
-              <div class="price">QAR 10,000<span>/mo</span></div>
+              <div class="price">QAR 10k<span>/mo</span></div>
             </div>
             <ul class="package-features">
-              <li>Website optimization guidance</li>
-              <li>SEO fundamentals + AEO basics</li>
-              <li>FB & Instagram management</li>
-              <li>AI-generated posts</li>
-              <li>Basic ads management</li>
+              <li>SEO & AEO Fundamentals</li>
+              <li>Platform Management</li>
+              <li>Basic AI Content</li>
+              <li>Ads Management</li>
             </ul>
-            <a href="#" class="btn btn-outline book-trigger">Choose Plan</a>
+            <div class="magnetic-wrap">
+              <a href="#" class="btn btn-glass book-trigger">Apply Now</a>
+            </div>
           </div>
-          <div class="package-card reveal green featured" style="animation-delay: 0.2s">
+          <div class="package-card featured reveal">
             <div class="package-badge">Most Chosen</div>
             <div class="package-header">
               <h3>Performance Partner</h3>
-              <div class="price">QAR 15,000<span>/mo</span></div>
+              <div class="price">QAR 15k<span>/mo</span></div>
             </div>
             <ul class="package-features">
-              <li>Full website conversion</li>
-              <li>Advanced SEO + AEO</li>
-              <li>All major platforms</li>
-              <li>High-quality AI videos</li>
-              <li>WhatsApp automation</li>
-              <li>Lead flow & sales support</li>
+              <li>Full Website Conversion</li>
+              <li>Advanced AI Video</li>
+              <li>WhatsApp Sales Bot</li>
+              <li>Full Strategy & ROI</li>
             </ul>
-            <a href="#" class="btn btn-primary book-trigger">Choose Plan</a>
+            <div class="magnetic-wrap">
+              <a href="#" class="btn btn-primary book-trigger">Apply Now</a>
+            </div>
           </div>
-          <div class="package-card reveal purple" style="animation-delay: 0.3s">
+          <div class="package-card reveal">
             <div class="package-header">
-              <h3>Revenue Accelerator</h3>
-              <div class="price">QAR 22,000<span>/mo</span></div>
+              <h3>Accelerator</h3>
+              <div class="price">QAR 22k<span>/mo</span></div>
             </div>
             <ul class="package-features">
-              <li>Full strategy ownership</li>
-              <li>Advanced CRO</li>
-              <li>Multi-platform scaling</li>
-              <li>Sales funnel design</li>
-              <li>Weekly reviews</li>
-              <li>Priority execution</li>
+              <li>Full Strategy Ownership</li>
+              <li>Multi-Platform Scaling</li>
+              <li>Advanced Automation</li>
+              <li>Priority Execution</li>
             </ul>
-            <a href="#" class="btn btn-outline book-trigger">Choose Plan</a>
+            <div class="magnetic-wrap">
+              <a href="#" class="btn btn-glass book-trigger">Apply Now</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section id="cta-block" class="section">
-      <div class="container reveal">
-        <div class="cta-box">
-          <h2>Let's Talk</h2>
-          <p>If you want a focused partner who manages digital growth like a business function, not a side task, let’s connect.</p>
-          <div class="hero-btns">
-            <a href="#" class="btn btn-primary book-trigger">Book a Strategy Call</a>
-            <a href="#" class="btn btn-outline">Contact Us</a>
-          </div>
+      <div class="container reveal" style="text-align: center;">
+        <h2 style="margin-bottom: 3rem;">Ready to shift gears?</h2>
+        <div class="magnetic-wrap">
+          <a href="#" class="btn btn-primary btn-large book-trigger">Secure a Strategy Call</a>
         </div>
+        <p style="margin-top: 2rem; color: var(--text-muted);">Strictly limited to 2 new partners per month.</p>
       </div>
     </section>
   </main>
 
-  <footer class="footer reveal">
-    <div class="container">
+  <footer class="footer">
+    <div class="container reveal">
        <div class="footer-grid">
          <div class="footer-brand">
-           <div class="logo"><img src="/logo.png" alt="DreamNXT.ai" class="logo-img"></div>
-           <p>Few clients. Deep focus. <br/>Committed ROI.</p>
+           <img src="/logo.png" alt="DreamNXT.ai" class="logo-img">
+           <p>Engineered for growth. <br/>Reserved for the few.</p>
          </div>
          <div class="footer-col">
-           <h4>Navigation</h4>
-           <ul>
-             <li><a href="#who-we-are">Who We Are</a></li>
-             <li><a href="#services">What We Do</a></li>
-             <li><a href="#how-we-work">Our Process</a></li>
-             <li><a href="#packages">Packages</a></li>
-           </ul>
+           <h4>Services</h4>
+           <a href="#services">Conversion Architecture</a>
+           <a href="#services">AI Automation</a>
+           <a href="#services">Paid Scaling</a>
          </div>
          <div class="footer-col">
-           <h4>What We Do</h4>
-           <ul>
-             <li><a href="#services">Website & SEO</a></li>
-             <li><a href="#services">Social & AI Content</a></li>
-             <li><a href="#services">Performance Ads</a></li>
-             <li><a href="#services">Sales CRM & Automation</a></li>
-           </ul>
-         </div>
-         <div class="footer-col">
-           <h4>Support</h4>
-           <ul>
-             <li><a href="#">Privacy Policy</a></li>
-             <li><a href="#">Terms of Service</a></li>
-             <li><a href="mailto:hello@dreamnxt.ai">hello@dreamnxt.ai</a></li>
-           </ul>
+           <h4>Contact</h4>
+           <a href="mailto:hello@dreamnxt.ai">hello@dreamnxt.ai</a>
+           <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 1rem;">Based in Qatar.</p>
          </div>
        </div>
        <div class="footer-bottom">
-         <p>&copy; 2026 DreamNXT.ai. All rights reserved.</p>
-         <div class="footer-disclaimer">
-           Ad and media spend is paid directly by the client. Our fee covers strategy, execution, AI systems, and results.
-         </div>
+         <p>&copy; 2026 DreamNXT.ai</p>
        </div>
     </div>
   </footer>
@@ -322,42 +233,89 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div class="modal">
       <button class="modal-close">&times;</button>
       <div class="booking-container">
-        <h2>Schedule Your Strategy Call</h2>
-        <p>Choose a time that works for you.</p>
+        <h2>Book Your Private Strategy Call</h2>
         <div class="calendly-inline-widget" data-url="https://calendly.com/dreamnxt-ai/30min" style="min-width:320px;height:700px;"></div>
       </div>
     </div>
+  </div>
+
   <div class="floating-cta">
-    <a href="#" class="btn btn-glass book-trigger">Book Strategy Call</a>
+    <div class="magnetic-wrap">
+      <a href="#" class="btn btn-glass book-trigger">Book Call</a>
+    </div>
   </div>
 `
 
-// Mobile Menu Logic
-const menuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
+// --- LOGIC ---
 
-menuBtn?.addEventListener('click', () => {
-  menuBtn.classList.toggle('active');
-  navLinks?.classList.toggle('active');
-  document.body.classList.toggle('menu-open');
+// Custom Cursor
+const cursor = document.getElementById('custom-cursor');
+document.addEventListener('mousemove', (e) => {
+  if (cursor) {
+    cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+  }
 });
 
-// Close menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    menuBtn?.classList.remove('active');
-    navLinks?.classList.remove('active');
-    document.body.classList.remove('menu-open');
+// Magnetic Buttons
+const magnets = document.querySelectorAll('.magnetic-wrap');
+magnets.forEach((m) => {
+  const magnet = m as HTMLElement;
+  const btn = magnet.querySelector('.btn') as HTMLElement;
+  
+  magnet.addEventListener('mousemove', (e) => {
+    const rect = magnet.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    
+    btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+    if (cursor) cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px) scale(2)`;
+  });
+
+  magnet.addEventListener('mouseleave', () => {
+    btn.style.transform = `translate(0px, 0px)`;
+    if (cursor) cursor.style.transform = `translate(0, 0) scale(1)`;
   });
 });
 
-// Scroll logic for Floating CTA
+// Roadmap Progress
+const roadmapSteps = document.querySelectorAll('.roadmap-step');
+const progressBar = document.querySelector('.roadmap-progress') as HTMLElement;
+
 window.addEventListener('scroll', () => {
+  const roadmap = document.getElementById('roadmap');
+  if (roadmap && progressBar) {
+    const rect = roadmap.getBoundingClientRect();
+    const viewHeight = window.innerHeight;
+    
+    if (rect.top < viewHeight && rect.bottom > 0) {
+      const progress = Math.max(0, Math.min(100, ((viewHeight - rect.top) / (rect.height + viewHeight)) * 130));
+      progressBar.style.height = `${progress}%`;
+      
+      roadmapSteps.forEach((step, idx) => {
+        const stepRect = step.getBoundingClientRect();
+        if (stepRect.top < viewHeight * 0.7) {
+          step.classList.add('active');
+        } else {
+          step.classList.remove('active');
+        }
+      });
+    }
+  }
+  
+  // Floating CTA visibility
   const floatingCta = document.querySelector('.floating-cta');
-  if (window.scrollY > 500) {
+  if (window.scrollY > 800) {
     floatingCta?.classList.add('visible');
   } else {
     floatingCta?.classList.remove('visible');
+  }
+
+  // Header scroll
+  const header = document.querySelector('.header');
+  if (window.scrollY > 50) {
+    header?.classList.add('scrolled');
+  } else {
+    header?.classList.remove('scrolled');
   }
 });
 
@@ -378,38 +336,16 @@ closeBtn?.addEventListener('click', () => {
   document.body.style.overflow = 'auto';
 });
 
-modal?.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-  }
-});
-
-// Header scroll effect
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('.header');
-  if (window.scrollY > 50) {
-    header?.classList.add('scrolled');
-  } else {
-    header?.classList.remove('scrolled');
-  }
-});
-
-// Simple reveal logic
-const observerOptions = {
-  threshold: 0.1
-}
-
+// Intersection Observer for Reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
     }
   });
-}, observerOptions);
+}, { threshold: 0.15 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Initialize Lucide icons
 // @ts-ignore
 lucide.createIcons();
